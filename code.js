@@ -10,6 +10,7 @@ while (r > 0) {
     main.appendChild(box);
     --r;
 }
+hover();
 const change = document.getElementById('change');
 change.addEventListener('change', () => {
     changeSize();
@@ -30,4 +31,13 @@ function changeSize() {
         main.appendChild(box);
         --r;
     }
+    hover();
+}
+function hover () {
+    const box = document.querySelectorAll('.box');
+    box.forEach(box => {
+        box.addEventListener('mouseover', () => {
+            box.style['background-color'] = 'black';
+        });
+    });
 }
