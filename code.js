@@ -37,7 +37,14 @@ function hover () {
     const box = document.querySelectorAll('.box');
     box.forEach(box => {
         box.addEventListener('mouseover', () => {
-            box.style['background-color'] = 'black';
+            box.style['background-color'] = 'rgb(122, 122, 122)';
         });
     });
 }
+const reset = document.getElementById('reset');
+reset.addEventListener('click', () => {
+    const box = document.querySelectorAll('.box');
+    box.forEach(box => {
+        box.style['background-color'] = 'rgb(226, 226, 226)';
+    });
+});
